@@ -1,0 +1,221 @@
+body {
+    background: url(images/fond_ecran.png) no-repeat center fixed;
+    background-size: cover;
+}
+
+.navbar {
+    background-color: white;
+    opacity: 0.9;
+    display: flex;
+    flex
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-color: transparent;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right:0px;
+    left:0px;
+    align-items: center;
+    z-index: 2;
+}
+
+
+.main {
+    margin: 23% 2% 0px 2%;
+    background-color: white;
+    opacity: 0.90;
+    padding: 3% 20%;
+}
+
+main {
+    margin: 15% 2% 0px 2%;
+}
+
+#accueil {
+    margin: 95px 2% 0px 2%;
+}
+
+.main pre, .main p, .main h1 {
+    margin-bottom: 5%;
+}
+
+section h2 {
+    text-decoration: underline;
+    font-size-adjust: center;
+}
+
+.logo_entr {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15% auto 2% auto;
+
+}
+
+#logos{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 15%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+#logos img {
+    margin-bottom: 30%;
+}
+
+
+.onglet:hover {
+    background-color: rgb(0, 173, 218);
+}
+
+#texte {
+    top: 10em;  
+    margin: 5% 25%;
+}
+
+h1, h2 {
+    text-align: center;
+    justify-content: center;
+    font-family: roboto;
+    display: flex;
+    flex-wrap: wrap;
+    color:#adadad;
+}
+
+#choix {
+    text-align: center;
+    top: 4em;
+    margin: 5% auto;
+}
+
+.titre {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 15% auto 1% auto;
+    font-size: 3.2em;
+}
+
+
+section {
+    margin-bottom: 20%;
+}
+
+section ul {
+     margin-bottom: 5%;
+}    
+
+
+section a:link {
+    color: #020038;
+}
+
+section a:hover {
+    color: #adadad;
+}
+
+section a:visited {    
+    color: rgb(0, 173, 218);
+}
+
+section a:active {
+    color: blueviolet;
+}
+
+.entoure {
+    border-style:solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+p, li {
+    font-family: Tahoma;
+    font-size: 1.2em;
+    color: #020038;
+}
+
+.glyphicon {
+    font-size: 25px;
+}
+@media only screen and (max-width: 400px) {
+    #tablet{
+        display:none;
+    }
+    .dropdown{
+        margin-right: 60%;
+        position: relative;
+        left: 0px;
+    }
+    #etapes_md{
+        display: none;
+    }
+    #logo{
+        position:relative;
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar-nav{
+        display: none;
+    }
+    #tablet{
+        position: relative;
+        top:7px;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+    body{
+        background: url(images/fond_ecran_sm.png) no-repeat center fixed;
+        background-size: cover;
+    }
+    
+    #logos{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 15%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5% 10%;
+}
+    #etapes_md{
+        display: none;
+    }
+
+}
+@media only screen and (min-width: 800px) {
+    .dropdown{
+        display: none;
+    }
+    #tablet{
+        display:none;
+    }
+    #etapes_xs{
+        display: none;
+    }
+
+}
+
+#img_etapes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,0 +1,87 @@
+<head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <meta charset="utf-8" />
+    <title>Apple</title>
+    <meta name="keywords" lang="fr" content="Apple" />
+    <a id="Apple"></a>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-inverse col-md-12">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li class="onglet"><a href="Metier.html">Métier</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="onglet"><a href="Creation.html">Création</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="onglet"><a href="Langages.html">Langages</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="onglet"><a href="Sources.html">Sources</a></li>
+                </ul>
+
+            </div>
+            <div class="form-group" id="tablet">
+                 <input type="search" class="input-sm form-control" placeholder="Recherche">
+            </div>
+            <a href="Accueil.html" id="logoiut">
+                <figure>
+                    <img id="logo" src="images/logo%20iut.png" alt="Logo IUT" title="Logo IUT" width="110" height="70">
+                </figure>
+            </a>
+            <ul class="nav navbar-nav">
+                <li class="onglet"><a href="Metier.html">Métier</a></li>
+                <li class="onglet"><a href="Creation.html">Création</a></li>
+                <li class="onglet"><a href="Langages.html">Langages</a></li>
+                <li class="onglet"><a href="Sources.html">Sources</a></li>
+                <form class="navbar-form navbar-right inline-form">
+                    <div class="form-group">
+                        <input type="search" class="input-sm form-control" placeholder="Recherche">
+                    </div>
+                </form>
+            </ul>
+        </nav>
+    </header>
+    
+    <figure class="logo_entr">
+        <img id="logo apple" src="images/apple.png" alt="Logo Apple" title="Logo Apple" width="200" height="200">
+    </figure>
+
+    <main class="main">
+        <h1>Apple</h1>
+
+        <p>iOS est la plateforme mobile d’Apple, les applications sous iOS sont développées en Swift mais aussi en Objective-C. Swift est un langage de programmation compilé multi-paradigmes développé par la société Apple. Il est destiné à la programmation d'applications sur les systèmes d'exploitation iOS, macOS, watchOS et tvOS. Il est conçu pour coexister avec l'Objective-C, langage actuel de programmation pour les systèmes d'exploitation d'Apple et le C. Le Swift est relativement jeune puisque sa première version publique est sortie en 2014. Ce langage est jugé « plus simple que l'Objective-C, permettant d'en faire autant en moins de lignes. »</p>
+
+        <h2>Exemple de code en Swift : "Hello Word" </h2>
+
+        <pre>
+        print("Hello, world!")
+        </pre>
+
+        <p>On remarque que le code est tout simple et qu’il ne nécessite aucune classe, aucune fonction déclarée au préalable. Objective-C est un langage de programmation orienté objet. C'est une extension du C, comme le C++, mais qui se distingue de ce dernier par sa distribution dynamique des messages. Aujourd’hui, il est surtout utilisé pour le développement sur les os Apple.</p>
+        
+        <h2>Exemple de code en Objective-C : "Hello Word" </h2>
+        
+        <pre>
+        int main (int argc, const char * argv[])
+        {
+            NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+            NSLog (@"Hello, World!");
+            [pool drain];
+            
+            return 0;
+        }
+        </pre>
+        
+        <p>On remarque beaucoup de similarités au langage C, même si la synthaxe n'est pas la même.</p>
+        
+    </main>
+</body>

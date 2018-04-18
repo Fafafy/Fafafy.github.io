@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Maintenay Emilien</title>
+    <meta name="keywords" lang="fr" content="Accueil" />
+    <a id="Accueil"></a>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-main navbar-static-top" id="P1">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="index.php">Logo</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#P1">Présentation<span class="sr-only">(current)</span></a></li>
+                        <li id="BtnProj"><a href="#P2">Projets</a></li>
+                    </ul>
+                    <div class="navbar-brand hidden-xs">
+                            <img class="logo img-fluid rounded-circle" src="images/Fafafy.jpg" alt="Logo">
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="BtnComp"><a href="#P3">Compétences</a></li>
+                        <li id="BtnCon"><a href="#P4">Contact</a></li>
+                       
+                    </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    </header>
+
+    <main>
+        <div class="present" >
+            <h1>Maintenay Emilien</h1>
+            <p>Passionné d’informatique, j’ai poursuivi mes études dans cette voie. Je souhaite travailler dans la Cyber sécurité, un de mes domaines favoris.</p>
+        </div>
+        <div class="projet-div" id="P2">
+            <div class="titre">
+                <div class="caption">
+                    <span>Mes projets</span>
+                </div>
+            </div>
+            <div class="projets">
+                    <div class="contour-img-princ" id="img-g">
+                        <div class="img-princ">
+                        <p>Projet ISN</p>
+                        </div>
+                    </div>
+                    <div class="le-reste">
+                        <div class="contour-le-reste" id="img-dh">
+                            <div class="un-reste"></div>
+                        </div>
+                        <div class="contour-le-reste" id="img-db" >
+                            <div class="deux-reste" ><h1>       Fuccc</h1></div>
+                        </div>
+                    </div>  
+            </div>
+        </div>
+        <div class="competences-div">
+            <div class="titre" id="P3">
+                <div class="caption">
+                    <span>Compétences</span>
+                </div>
+            </div>
+            <div class="Comp">
+                <h1 id="Comptext">Compétences Web</h1>
+                <span id="btnlft" class="glyphicon glyphicon-chevron-left"></span>
+                <span id="btnrgt" class="glyphicon glyphicon-chevron-right"></span>
+                <div class="icons">
+                    <div class="icon i5" id="htmlicon"><p>HTML 5</p></div>
+                    <div class="icon i5" id="cssicon"><p>CSS</p></div>
+                    <div class="icon i5" id="jqueryicon"><p>jQuery</p></div>
+                    <div class="icon i5" id="bootstrapicon"><p>BootStrap</p></div>
+                </div>
+                <div class="icons">
+                    <div class="icon i4" id="pythonicon"><p>Python</p></div>
+                    <div class="icon i4" id="javaicon"><p>Java</p></div>
+                    <div class="icon i4" id="cicon"><p>C</p></div>
+                </div>
+                <div class="icons">
+                    <div class="icon i6" id="debianicon"><p>Debian</p></div>
+                    <div class="icon i6" id="giticon"><p>Git</p></div>
+                    <div class="icon i6" id="umlicon"><p>UML</p></div>
+                    <div class="icon i6" id="SQLicon"><p>SQL</p></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="contact-div">
+            <div class="titre" id="P4">
+                <div class="caption">
+                    <span>Contact</span>
+                </div>
+            </div>
+            <div class="Contact">
+                <h1></h1>
+            
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Fiérement programmée de A à Z en utilisant Brackets et BootStrap</p>
+    </footer>
+    
+    
+//Script JQuery
+    <script type="text/javascript">
+        var lst = 0;
+        var pactu = 1;
+        var compactu=5;
+        $(document).ready(function() {
+            window.location.href = "#P1";
+            $(".present").fadeIn(5000);
+            $("#img-g").animate({left: '-100vw'});
+            $("#img-db").animate({right: '-100vw'},'slow');
+            $("#img-dh").animate({right: '-100vw'},'slow');
+            $(".i6").animate({left: '-100vw'});
+            $(".i4").animate({left: '100vw'});
+        });
+        function projetanimation(){
+            $("#img-g").animate({left: '-1vw'},'slow');
+            $("#img-db").animate({right: '-1vw'},500);
+            $("#img-dh").animate({right: '-1vw'},'slow');
+        }
+        function projetanimationgby(){
+            $("#img-g").animate({left: '-100vw'},'slow');
+            $("#img-db").animate({right: '-100vw'},500);
+            $("#img-dh").animate({right: '-100vw'},'slow');
+        }
+        
+        //Configuration de la navbar
+        
+        $("#BtnProj").click(function(){
+                pactu=2;
+                $('html,body').animate({scrollTop: $("#P2").offset().top},'slow');
+                projetanimation();
+        });
+        $("#BtnComp").click(function(){
+                pactu=3;
+                $('html,body').animate({scrollTop: $("#P3").offset().top},'slow');
+        });
+        $("#BtnCon").click(function(){
+                pactu=4;
+                $('html,body').animate({scrollTop: $("#P4").offset().top},'slow');
+        });
+        
+        //Configuration du menu de compétences
+        
+        $("#btnlft").click(function(){
+            if (compactu==5){
+                $('#CompText').text("Language de programmation");
+                $('.i5').animate({left: '-100vw'});
+                $(".i5").fadeOut(0);
+                $(".i4").animate({left: '100vw'});
+                compactu=4;
+                $(".i4").fadeIn();
+                $(".i4").animate({left: '0px'});
+            } else if (compactu==4){
+                $('#CompText').text("Language de programmation");
+                $('.i4').animate({left: '-100vw'});
+                $(".i4").fadeOut(0);
+                $(".i6").animate({left: '100vw'});
+                compactu=6;
+                $(".i6").fadeIn();
+                $(".i6").animate({left: '0px'});
+            } else if (compactu==6){
+                $('#CompText').text("Language de programmation");
+                $('.i6').animate({left: '-100vw'});
+                $(".i6").fadeOut(0);
+                $(".i5").animate({left: '100vw'});
+                compactu=5;
+                $(".i5").fadeIn();
+                $('.i5').animate({left: '0px'});
+            }
+                
+        });
+        $("#btnrgt").click(function(){
+            if (compactu==5){
+                $('#CompText').text("Language de programmation");
+                $('.i5').animate({left: '100vw'});
+                $(".i5").fadeOut(0);
+                $(".i6").animate({left: '-100vw'});
+                compactu=6;
+                $(".i6").fadeIn();
+                $(".i6").animate({left: '0px'});
+            } else if (compactu==6){
+                $('#CompText').text("Language de programmation");
+                $('.i6').animate({left: '100vw'});
+                $(".i6").fadeOut(0);
+                $(".i4").animate({left: '-100vw'});
+                compactu=4;
+                $(".i4").fadeIn();
+                $(".i4").animate({left: '0px'});
+            } else if (compactu==4){
+                $('#CompText').text("Language de programmation");
+                $('.i4').animate({left: '100vw'});
+                $(".i4").fadeOut(0);
+                $(".i5").animate({left: '-100vw'});
+                compactu=5;
+                $(".i5").fadeIn();
+                $(".i5").animate({left: '0px'});
+            }
+        });
+        
+        //Configuartion du "siteweb-diapo"
+        
+        $(window).bind('mousewheel', function(event) {
+            if (event.originalEvent.wheelDelta >= 0) {
+                //up
+                if (pactu==2){
+                    $('html,body').animate({scrollTop: $("#P1").offset().top},'slow');
+                    pactu=1;
+                    projetanimationgby()
+                } else if (pactu==3){
+                    $('html,body').animate({scrollTop: $("#P2").offset().top},'slow');
+                    pactu=2;
+                    projetanimation();
+                } else if (pactu==4){
+                    $('html,body').animate({scrollTop: $("#P3").offset().top},'slow');
+                    pactu=3;
+                }
+            } else {
+                //down
+                if (pactu==1){
+                    $('html,body').animate({scrollTop: $("#P2").offset().top},'slow');
+                    pactu=2;
+                    projetanimation();
+                } else if (pactu==2){
+                    $('html,body').animate({scrollTop: $("#P3").offset().top},'slow');
+                    pactu=3;
+                    projetanimationgby()
+                } else if (pactu==3){
+                    $('html,body').animate({scrollTop: $("#P4").offset().top},'slow');
+                    pactu=4;
+                }
+                
+            }
+        });
+    
+    </script>
+</body>
+</html>
