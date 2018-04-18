@@ -1,6 +1,8 @@
 @font-face {
     font-family: MoonGet;
-    src: url("fonts/CaviarDreams_bold.ttf");      
+    src: url("fonts/CaviarDreams_bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -22,6 +24,7 @@ body{
   left: 0;
   top: 22%;
   width: 100%;
+    font-size: 5vh;
   text-align: center;
   color: white;
 }
@@ -164,6 +167,7 @@ body{
     display: flex;
 }
 #btnrgt, #btnlft {
+    cursor: pointer;
     z-index: 5;
     top: 25vh;
     font-size:500%;
@@ -176,17 +180,17 @@ body{
     top:100%;
 }
 #htmlicon{
-    margin-left: 10%;
+    margin-left: 7%;
     background-image:url(images/html5.svg);
 }
 #cssicon{
     background-image: url(images/css3.svg);
 }
 #jqueryicon{
-    background-image: url(images/uml.svg);
+    background-image: url(images/JQuery.png);
 }
 #bootstrapicon{
-    margin-right:10%;
+    margin-right:7%;
     background-image: url(images/bootstrap.svg);
 }
 #javaicon{
@@ -205,10 +209,10 @@ body{
 }
 #SQLicon{
     margin-right: 10%;
-    background-image: url(images/php.svg);
+    background-image: url(images/PostgreSQL.png);
 }
 #umlicon{
-    background-image: url(images/uml.svg);
+    background-image: url(images/UML.png);
 }
 #giticon{
     background-image: url(images/git.svg);
@@ -217,7 +221,6 @@ body{
     margin-right: 17%;
 }
 .i4{
-    
     margin-right: 20%;
     display: none;
 }
@@ -225,14 +228,15 @@ body{
     display: none;
 }
 .icon{
-    top : 9vh;
     color: white;
+    top: 12vh;
+    position: absolute;
     text-align: center;
     position:relative;
-    height: 125px;
-    width: 100px;
+    height: 20vh;
+    width: 20vh;
     background-position: center;
-    background-size: 100px,100px;
+    background-size:contain;
     background-repeat: no-repeat;
 }
 /* STYLE POUR LE CONTACT */
