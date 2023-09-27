@@ -1,24 +1,10 @@
 @font-face {
-    font-family: 'TheBoldFont';
+    font-family: 'MoonGet';
     src: url('fonts/theboldfont.woff2') format('woff2'),
          url('fonts/theboldfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
 
-@font-face {
-    font-family: 'UndefinedMedium';
-    src: url('fonts/undefined-medium.woff2') format('woff2'),
-         url('fonts/undefined-medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('fonts/Roboto-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 }
 
 /*@media (){
@@ -32,7 +18,6 @@
 }
 @media (min-aspect-ratio: 13/9){*/
   body{
-    overflow-x: hidden;
     background-color: #202020;
     background-image: radial-gradient(gray 1%, transparent 2.25%);
     background-size: 6vw 13vh;
@@ -69,11 +54,15 @@
       width:54.1125vw;
       height:5px;
       top:38vh;
-    }
+    }/*
+    100%{
+      width:5px;
+      top:50%;
+      height:0px;
+      display: none;
+    }*/
 
   }
-
-  /*** -MON NOM AVEC LE SUPER EFFET STEREOSCOPIQUE POUR LA NAVBAR ET LE GROS TITRE ***/
 
   #monnomen3D {
     position: absolute;
@@ -87,9 +76,9 @@
     overflow:hidden;
     margin-block-start:0px;
     margin-block-end: 0px;
-    font-family: 'TheBoldFont';
+    font-family: 'MoonGet';
     font-style: oblique;
-    font-size: 3.3em;
+    font-size: 4vw;
     user-select: none;
     width:40vw;
     height: 10vh;
@@ -130,7 +119,6 @@
     }
   }
 
-  /*** -ANIMATION DES BORDURES DU GROS TITRE ***/
   #borduregauchetitre {
     position:absolute;
     width:5px;
@@ -165,13 +153,13 @@
       height:100%;
     }
   }
-
+  /***                              ***/
   /***   NAVBAR EXTREMEMENT CLASSE  ***/
 
   #navbar{
     position: fixed;
     width:100vw;
-    height: 90px;
+    height: 12.2vh;
     z-index: 5;
     overflow: hidden;
     background-color: #292929;
@@ -180,7 +168,7 @@
   }
   @keyframes apparitionNavbar {
     80%{
-      top:-90px;
+      top:-12.2vh;
     }
     100%{
       top:0px;
@@ -188,10 +176,9 @@
   }
   #navbar #monnomen3D{
     position: absolute;
+    width: 20vw;
     left:-20vw;
-    top:25px;
-    width: 300px;
-    height: 50px;
+    top:4vh;
     animation:apparitionMonNomEn3DDansNavbar 0.5s ease 2.2s forwards;
   }
 
@@ -216,9 +203,7 @@
   }
 
   #navbar #monnomen3D p{
-    height:45px;
-    width: 300px;
-    font-size: 2em;
+    font-size: 2vw;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
@@ -230,13 +215,14 @@
     display: flex;
     flex-direction: row;
     right: 0px;
-    top:20px;
+    top:2.1vh;
     width:30vw;
   }
 
   .iconeNavBarContainer{
     position: relative;
-    width:27px;
+    height: 8vh;
+    width:2vw;
     margin-right: 4vw;
   }
 
@@ -249,8 +235,8 @@
     position: absolute;
     left:0px;
     top:0px;
-    height: 45px;
-    width:27px;
+    height: 8vh;
+    width:2vw;
     vertical-align: middle;
     mix-blend-mode: color-dodge;
     transition: 0.2s ease-in;
@@ -337,7 +323,10 @@
     transform: translate(1.5px,1.5px);
   }
 
-/*** LA PREMIERE DE COUVERTURE ***/
+
+  #maPhotoContainer{
+
+  }
 
   #maPhoto{
     position: absolute;
@@ -349,7 +338,7 @@
     overflow: hidden;
     box-sizing:border-box;
     border-radius: 50%;
-    border:5px solid #ECE8E1;
+    border:5px solid white;
     opacity: 0;
     animation:appearPhoto 0.5s ease 3.25s forwards;
     transform: rotate(-5deg);
@@ -374,7 +363,6 @@
     box-sizing:border-box;
     overflow:hidden;
     margin-bottom: 14vh;
-    padding : 0px 5.9vw 5.9vw 5.9vw;
     animation:appearPartie 0.75s ease 2.5s forwards;
   }
 
@@ -385,9 +373,9 @@
     height:0px;
     /*Pour garder les bordures à l'intérieur du div*/
     box-sizing:border-box;
-    border-top:0px solid #ECE8E1;
-    border-left:0px solid #ECE8E1;
-    border-bottom:0px solid #ECE8E1;
+    border-top:0px solid white;
+    border-left:0px solid white;
+    border-bottom:0px solid white;
     animation:appearG 1s ease 2.25s forwards;
   }
 
@@ -397,34 +385,33 @@
     width:0px;
     height:0px;
     box-sizing:border-box;
-    border-right:0px solid #ECE8E1;
-    border-top:0px solid #ECE8E1;
+    border-right:0px solid white;
+    border-top:0px solid white;
     border-bottom:0px solid white;
     animation:appearD 1s ease 2.25s forwards;
   }
   @keyframes appearPartie{
     100%{
       height:130vh;
-      overflow: visible;
     }
   }
   @keyframes appearG {
     0%{
-      border-top:5px solid #ECE8E1;
+      border-top:5px solid white;
     }
     50%{
-      border-top:5px solid #ECE8E1;
-      border-left:5px solid #ECE8E1;
+      border-top:5px solid white;
+      border-left:5px solid white;
       width:39.15vw;
       height:5px;
     }
     90%{
-      border-bottom:0px solid #ECE8E1;
+      border-bottom:0px solid white;
     }
     100% {
-      border-top:5px solid #ECE8E1;
-      border-left:5px solid #ECE8E1;
-      border-bottom:5px solid #ECE8E1;
+      border-top:5px solid white;
+      border-left:5px solid white;
+      border-bottom:5px solid white;
       width:39.15vw;
       height:130vh;
     }
@@ -432,189 +419,72 @@
 
   @keyframes appearD {
     0%{
-      border-top:5px solid #ECE8E1;
+      border-top:5px solid white;
     }
     50%{
-      border-top:5px solid #ECE8E1;
-      border-right:5px solid #ECE8E1;
+      border-top:5px solid white;
+      border-right:5px solid white;
       width:39.15vw;
       height:5px;
     }
     90%{
-      border-bottom:0px solid #ECE8E1;
+      border-bottom:0px solid white;
     }
     100% {
-      border-top:5px solid #ECE8E1;
-      border-right:5px solid #ECE8E1;
-      border-bottom:5px solid #ECE8E1;
+      border-top:5px solid white;
+      border-right:5px solid white;
+      border-bottom:5px solid white;
       height:130vh;
       width:39.15vw;
     }
   }
 
-  #accroche{
-    font-family: 'TheBoldFont';
-    color : white;
-    margin-top : 7vh;
-    font-size: 5em;
-    opacity: 0%;
-    left : 500px;
-    animation: sliding-slideaccroche 0.5s linear 2.8s forwards;
-  }
-
-  @keyframes sliding-slideaccroche{
-    100%{
-      opacity: 100%;
-      margin-top:10vh;
-    }
-
-  }
-
-  #slidePP{
+  #fondPP{
     position: absolute;
-    width:500vw;
-    height:140vh;
-    left : 1000vw;
-    z-index: 2;
-    background-color: #FF332C;
-    transform: skewX(110deg);
-    margin-top: -75vh;
-    animation: sliding-slidePP 1s ease 2.5s forwards;
+    width:0px;
+    height:0px;
+    clip-path:polygon(0 0, 0 100%, 100% 0);
+    background-color:gray;
+    animation: slideFond 1.5s ease 4s forwards;
   }
 
-  @keyframes sliding-slidePP {
-    100%{
-      left : 15vw;
-    }
-  }
-
-  #accrochetexte{
-    font-family: 'Roboto';
-    font-size: 2em;
-    z-index: 10;
-  }
-
-  #competences{
-    position: absolute;
-    top:207vh;
-    left:11.1vw;
-    width:77.8vw;
-    height:50vh;
-
-  }
-
-  #soustitre{
-    position: absolute;
-    background-color: #ECE8E1;
-    margin-left: -36.4vw;
-    width:36.4vw;
-    height:13vh;
-    animation: slideSousTitre 0.5s ease-out 0.3s forwards;
-  }
-
-  @keyframes slideSousTitre {
+  @keyframes slideFond {
     100% {
-      margin-left: 0px;
+      width:200%;
+      height:200%;
     }
   }
-  #soustitreContainer{
+
+  #containerRayuresPP{
+    position: absolute;
     overflow: hidden;
+    top:24.75vh;
+    width:0px;
+    height:0px;
+    right:0px;
+    clip-path:polygon(0 0, 100% 0, 100% 100%);
+    animation: slideRayures 1.5s ease 3.5s forwards;
+  }
+
+  #rayuresPP{
     position: absolute;
-    width:36.4vw;
-    height:13vh;
-
-  }
-  #soustitre p{
-    position:static;
-    margin-top: 2.5vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    font-family: 'TheBoldFont';
-    font-style: oblique;
-    font-size: 2.5em;
+    right: 0px;
+    width:100vw;
+    height:156.5vh;
+    background-image: repeating-linear-gradient(-45deg,#303030 0 3vw,#202020 3vw 6vw);
   }
 
-  .arrowtitre{
-    position: absolute;
-    height:13vh;
-    margin-left: -5vw;
-  }
-
-  #arrow1{
-    animation: slideArrow 0.4s linear forwards;
-  }
-
-  #arrow2{
-    animation: slideArrow 0.4s linear 0.1s forwards;
-  }
-
-  #arrow3{
-    animation: slideArrow 0.4s linear 0.2s forwards;
-  }
-
-  @keyframes slideArrow {
+  @keyframes slideRayures {
     100% {
-      margin-left: 36.4vw;
+      width:200vw;
+      height:313vh;
     }
   }
 
-  #trappe{
-    position: absolute;
-    width:63.9vw;
-    height:52vh;
-    border : 1px solid rgba(236, 232, 225, 0);
-    background-color: #202020;
-    background-image: radial-gradient(gray 1%, transparent 2.25%);
-    background-size: 6vw 13vh;
-    background-position: 3vw 6.5vh;
-    border-style:solid;
-    animation: openTrappe 2s ease-in 1s forwards;
+  #premierepartie p{
+    z-index: 3;
+    color: white;
   }
-
-  @keyframes openTrappe {
-    25% {
-      border-color:rgba(236, 232, 225, 1);
-      left:0vw;
-    }
-    100% {
-      border-color:rgba(236, 232, 225, 1);
-      left:100vw;
-    }
-  }
-
-  #behindTheWeb{
-    position: absolute;
-    left:36.1vw;
-    top:25.9vh;
-    width:63.9vw;
-    height:52vh;
-    overflow: hidden;
-    background-color: #012152;
-  }
-
-  #behindTheWeb p{
-    position:absolute;
-    width:70vw;
-    height:52vh;
-    margin-top: -75px;
-    margin-left: -15px;
-    font-family: 'UndefinedMedium';
-    font-size: 3em;
-    line-height: 0.9em;
-    color: #21B8CB;
-    word-wrap:break-word;
-    animation: moveNumbers 2s ease-in 1s infinite;
-  }
-
-  @keyframes moveNumbers {
-    50%{
-      width:63.9vw;
-    }
-    100%{
-      width:70vw;
-    }
-  }
-
 
 
 
