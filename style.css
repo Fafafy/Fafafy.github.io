@@ -1,245 +1,621 @@
 @font-face {
-    font-family: MoonGet;
-    src: url("fonts/CaviarDreams_bold.ttf") format("truetype");
+    font-family: 'TheBoldFont';
+    src: url('fonts/theboldfont.woff2') format('woff2'),
+         url('fonts/theboldfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: MoonGetB;
-    src: url("fonts/CaviarDreams_bold.ttf");      
+    font-family: 'UndefinedMedium';
+    src: url('fonts/undefined-medium.woff2') format('woff2'),
+         url('fonts/undefined-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-body{
-    font-family: "MoonGet";
-    overflow-x : hidden;
-    overflow-y: hidden;
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@media (){
+  body{
     background-color: #202020;
-    margin: 0;
+    background-image: radial-gradient(gray 1%, transparent 2.25%);
+    background-size: 13vw 13vh;
+    background-position: 5.5vw 5.5vh;
+    margin: 0px;
+  }
 }
+@media (min-aspect-ratio: 13/9){*/
+  body{
+    overflow-x: hidden;
+    background-color: #202020;
+    background-image: radial-gradient(gray 1%, transparent 2.25%);
+    background-size: 6vw 13vh;
+    background-position: 2.25vw 5.5vh;
+    margin: 0px;
+  }
 
-.caption {
-  font-family: "MoonGetB";
-  position: relative;
-  left: 0;
-  top: 22%;
-  width: 100%;
-    font-size: 5vh;
-  text-align: center;
-  color: white;
-}
+  body::-webkit-scrollbar {
+    width:0.25rem;
+  }
 
-.titre{
-    margin-top: 50px;
-    font-size: 1vh;
-    background-attachment: fixed;
-    height: 15%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("images/Splatfestisover.jpg");
-}
+  body::-webkit-scrollbar-track{
+    background:#202020;
+  }
+  body::-webkit-scrollbar-thumb{
+    background: #292929;
 
-/* STYLE POUR LA NAVBAR */
+  }
 
-.navbar .container, .navbar-inverse {
-  text-align: center;
-  background-color: #303030;
-  border: none;
-}
-.navbar-collapse .navbar-brand {
-  display: inline-block;
-  float: none;
-  padding: 0;
-  margin: 0 !important;
-  overflow: visible;
-}
+  /*** LE GROS TITRE QUI APPARAÎT AU TOUT DEBUT DU LANCEMENT ***/
 
-.navbar-collapse .navbar-brand .logo {
-  width: 161px;
-  height: 161px;
-}
-.rounded-circle {
-    z-index: 0;
-    margin-top : 50%;
-    border-radius: 50%;
-    min-width: 100%;
-}
+  #grostitre{
+    position:absolute;
+    overflow:hidden;
+    top:38vh;
+    right:22.7vw;
+    width:54.1125vw;
+    height:26vh;
+    animation: grostitredisparition 0.5s ease 2s forwards;
+  }
 
-/* STYLE POUR LA PRESENTATION */
+  @keyframes grostitredisparition {
+    100%{
+      width:54.1125vw;
+      height:5px;
+      top:38vh;
+    }
 
-.present{
-    text-align: center;
+  }
+
+  /*** -MON NOM AVEC LE SUPER EFFET STEREOSCOPIQUE POUR LA NAVBAR ET LE GROS TITRE ***/
+
+  #monnomen3D {
+    position: absolute;
+    width:54.1125vw;
+    height:26vh;
+    right: 0px;
+  }
+
+  #monnomen3D p{
+    position:absolute;
+    overflow:hidden;
+    margin-block-start:0px;
+    margin-block-end: 0px;
+    font-family: 'TheBoldFont';
+    font-style: oblique;
+    font-size: 3.3em;
+    user-select: none;
+    width:40vw;
+    height: 10vh;
+    padding-left: 9.05625vw;
+    padding-right: 9.05625vw;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+  }
+
+  #rouge {
+    animation: animrouge 0.075s ease 0.675s forwards;
+    color:#DE4752;
+    left:0px;
+    top:0px;
+  }
+
+  @keyframes animrouge {
+    100%{
+      left:1.5px;
+      top:1.5px;
+      mix-blend-mode: color-dodge;
+    }
+  }
+
+  #bleu {
+    left:0px;
+    top:0px;
+    animation: animbleu 0.075s ease 0.675s forwards;
     color:white;
-    top : 7em;
-    position: relative;
-    width: 75%;
-    height: calc(100vh - 50px);
-    margin : auto auto 0;
-    display: none;
-}
-.present p{
-    margin-top: 50px;
-    background-color:  #303030;
-    font-size: 2vw;
-}
-.present h1{
-    margin-top: 10%;
-}
-/* STYLE POUR LE PROJET*/
+  }
 
-.projet-div{
-    height: 100vh;
-}
-.projets{
-    margin-top: 50px;
-    margin-bottom: 4rem;
-    min-height: 360px;
-    position: relative;
-}
-.un-reste,.deux-reste,.img-princ{
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    
-}
-.img-princ{
-    color: white;
-    background-color: red;
-    left: 50px;
-    position: absolute;
-    top: 0;
-    height: 74vh;
-    width: 100%;
-    transform:  skew(7deg,0deg);
-}
-.un-reste{
-    background-color: green;
-    height: 32vh;
-}
-.deux-reste{
-    margin-top: 5px;
-    height: 32vh;
-    background-image: url(images/ProjetSite.png);
-    background-position: center;
-    background-size: cover;
-}
-.contour-img-princ{
-    position: absolute;
-    margin-left: -10%;
-    min-height: 74vh;
-    overflow: hidden;
-    width: 76.5%;
-    transform: skew(-7deg,0deg);
-}
-.le-reste{
-    min-height: 74vh;
-    position: relative;
-    right: -68%;
-    top: 0;
-    width: 40%;
-    transform: skew(-7deg,0deg);
-}
-.contour-le-reste{
-    min-height:41vh;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-.un-reste,.deux-reste{
-    position: absolute;
-    height: 32vh;
-    right: 10%;
-    width: 100%;
-    transform: skew(7deg,0deg);
-}
+  @keyframes animbleu {
+    100%{
+      left:-1.5px;
+      top:-1.5px;
+      mix-blend-mode: color-dodge;
+      color: #00E7E7;
+    }
+  }
 
-/* STYLE POUR LES COMPETENCES */
-.competences-div{
-    height: 100vh;
-}
-.Comp h1{
-    margin-top: 5%;
-    text-align: center;
-    color: white;
-}
-.icons{
-    display: flex;
-}
-#btnrgt, #btnlft {
-    cursor: pointer;
+  /*** -ANIMATION DES BORDURES DU GROS TITRE ***/
+  #borduregauchetitre {
+    position:absolute;
+    width:5px;
+    height:5px;
+    /*Pour garder les bordures à l'intérieur du div*/
+    box-sizing:border-box;
+    border-left:5px solid white;
+    border-bottom:5px solid white;
+    animation:apparitionBorduresTitres 1s ease forwards;
+  }
+
+  #borduredroitetitre {
+    position:absolute;
+    bottom: 0px;
+    right:0px;
+    width:5px;
+    height:5px;
+    box-sizing:border-box;
+    border-right:5px solid white;
+    border-top:5px solid white;
+    animation:apparitionBorduresTitres 1s ease forwards;
+  }
+
+  @keyframes apparitionBorduresTitres {
+    30%{
+      width:5px;
+      height:100%;
+    }
+    100% {
+      bottom: auto;
+      width:100%;
+      height:100%;
+    }
+  }
+
+  /***   NAVBAR EXTREMEMENT CLASSE  ***/
+
+  #navbar{
+    position: fixed;
+    width:100vw;
+    height: 90px;
     z-index: 5;
-    top: 25vh;
-    font-size:500%;
-}
-#btnrgt{
-    left:calc(100vw - 145px);
-}
-.icon p{
-    position:relative;
-    top:100%;
-}
-#htmlicon{
-    margin-left: 7%;
-    background-image:url(images/html5.svg);
-}
-#cssicon{
-    background-image: url(images/css3.svg);
-}
-#jqueryicon{
-    background-image: url(images/JQuery.png);
-}
-#bootstrapicon{
-    margin-right:7%;
-    background-image: url(images/bootstrap.svg);
-}
-#javaicon{
-    background-image: url(images/java.svg);
-}
-#cicon{
-    background-image: url(images/c.svg);
-}
-#pythonicon{
-    margin-left: 20%;
-    background-image: url(images/python.svg);
-}
-#debianicon{
-    margin-left: 10%;
-    background-image: url(images/debian.svg);
-}
-#SQLicon{
-    margin-right: 10%;
-    background-image: url(images/PostgreSQL.png);
-}
-#umlicon{
-    background-image: url(images/UML.png);
-}
-#giticon{
-    background-image: url(images/git.svg);
-}
-.i5, .i6{
-    margin-right: 17%;
-}
-.i4{
-    margin-right: 20%;
-    display: none;
-}
-.i6{
-    display: none;
-}
-.icon{
-    color: white;
-    top: 12vh;
+    overflow: hidden;
+    background-color: #292929;
+    animation:apparitionNavbar 2.5s ease forwards;
+    top:-12.2vh;
+  }
+  @keyframes apparitionNavbar {
+    80%{
+      top:-90px;
+    }
+    100%{
+      top:0px;
+    }
+  }
+  #navbar #monnomen3D{
     position: absolute;
-    text-align: center;
-    position:relative;
-    height: 20vh;
-    width: 20vh;
-    background-position: center;
-    background-size:contain;
-    background-repeat: no-repeat;
-}
-/* STYLE POUR LE CONTACT */
-.contact-div{
-    height: 100vh;
+    left:-20vw;
+    top:25px;
+    width: 300px;
+    height: 50px;
+    animation:apparitionMonNomEn3DDansNavbar 0.5s ease 2.2s forwards;
+  }
+
+  @keyframes apparitionMonNomEn3DDansNavbar {
+    100%{
+      left:1vw;
+    }
+  }
+
+  #navRouge {
+    left:1px;
+    top:1px;
+    color:#DE4752;
+    mix-blend-mode: color-dodge;
+  }
+
+  #navBleu {
+    left:-1px;
+    top:-1px;
+    color: #00E7E7;
+    mix-blend-mode: color-dodge;
+  }
+
+  #navbar #monnomen3D p{
+    height:45px;
+    width: 300px;
+    font-size: 2em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #navbarIcones{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    right: 0px;
+    top:20px;
+    width:30vw;
+  }
+
+  .iconeNavBarContainer{
+    position: relative;
+    width:27px;
+    margin-right: 4vw;
+  }
+
+  .iconeNavBarContainer:hover{
+    cursor: pointer;
+  }
+
+  .iconeMenu{
+    user-select: none;
+    position: absolute;
+    left:0px;
+    top:0px;
+    height: 45px;
+    width:27px;
+    vertical-align: middle;
+    mix-blend-mode: color-dodge;
+    transition: 0.2s ease-in;
+  }
+
+
+
+  .icobleu{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(88deg) brightness(102%) contrast(103%);
+  }
+
+  #icobleuHome{
+    animation:animicobleu 0.875s ease 2.625s forwards;
+  }
+
+  #icobleuCV{
+    animation:animicobleu 0.875s ease 2.725s forwards;
+  }
+
+  #icobleuContact{
+    animation:animicobleu 0.875s ease 2.825s forwards;
+  }
+
+
+  @keyframes animicobleu {
+    25%,75%{
+      left:-2px;
+      top:-2px;
+      filter: invert(65%) sepia(18%) saturate(4430%) hue-rotate(133deg) brightness(104%) contrast(108%);
+    }
+    100%{
+      left:0px;
+      top:0px;
+    }
+  }
+
+  #iconeHome:hover #icobleuHome{
+    filter: invert(65%) sepia(18%) saturate(4430%) hue-rotate(133deg) brightness(104%) contrast(108%);
+    transform: translate(-1.5px,-1.5px);
+  }
+
+  #iconeCV:hover #icobleuCV{
+    filter: invert(65%) sepia(18%) saturate(4430%) hue-rotate(133deg) brightness(104%) contrast(108%);
+    transform: translate(-1.5px,-1.5px);
+  }
+
+  #iconeContact:hover #icobleuContact{
+    filter: invert(65%) sepia(18%) saturate(4430%) hue-rotate(133deg) brightness(104%) contrast(108%);
+    transform: translate(-1.5px,-1.5px);
+  }
+
+  .icorouge{
+    filter: invert(32%) sepia(68%) saturate(1977%) hue-rotate(332deg) brightness(95%) contrast(82%);
+  }
+
+  #icorougeCV{
+    animation:animicorouge 0.875s ease 2.625s forwards;
+  }
+
+  #icorougeContact{
+    animation:animicorouge 0.875s ease 2.925s forwards;
+  }
+
+  @keyframes animicorouge {
+    25%,75%{
+      left:2px;
+      top:2px;
+    }
+    100%{
+      left:0px;
+      top:0px;
+    }
+  }
+
+  #iconeHome:hover #icorougeHome{
+    transform: translate(1.5px,1.5px);
+  }
+
+  #iconeCV:hover #icorougeCV{
+    transform: translate(1.5px,1.5px);
+  }
+
+  #iconeContact:hover #icorougeContact{
+    transform: translate(1.5px,1.5px);
+  }
+
+/*** LA PREMIERE DE COUVERTURE ***/
+
+  #maPhoto{
+    position: absolute;
+    z-index: 1;
+    top:30vh;
+    left:6vw;
+    width:10vw;
+    height: 10vw;
+    overflow: hidden;
+    box-sizing:border-box;
+    border-radius: 50%;
+    border:5px solid #ECE8E1;
+    opacity: 0;
+    animation:appearPhoto 0.5s ease 3.25s forwards;
+    transform: rotate(-5deg);
+  }
+
+  @keyframes appearPhoto {
+    50%{
+      opacity: 100;
+    }
+    100%{
+      opacity: 100;
+      transform: rotate(-15deg);
+    }
+  }
+
+  #premierepartie{
+    position:absolute;
+    width:78.3vw;
+    height:5px;
+    top:38vh;
+    left:11.1vw;
+    box-sizing:border-box;
+    overflow:hidden;
+    margin-bottom: 14vh;
+    padding : 0px 5.9vw 5.9vw 5.9vw;
+    animation:appearPartie 0.75s ease 2.5s forwards;
+  }
+
+  #bordureGPP{
+    position:absolute;
+    right:39.15vw;
+    width:0px;
+    height:0px;
+    /*Pour garder les bordures à l'intérieur du div*/
+    box-sizing:border-box;
+    border-top:0px solid #ECE8E1;
+    border-left:0px solid #ECE8E1;
+    border-bottom:0px solid #ECE8E1;
+    animation:appearG 1s ease 2.25s forwards;
+  }
+
+  #bordureDPP{
+    position:absolute;
+    left:39.15vw;
+    width:0px;
+    height:0px;
+    box-sizing:border-box;
+    border-right:0px solid #ECE8E1;
+    border-top:0px solid #ECE8E1;
+    border-bottom:0px solid white;
+    animation:appearD 1s ease 2.25s forwards;
+  }
+  @keyframes appearPartie{
+    100%{
+      height:130vh;
+      overflow: visible;
+    }
+  }
+  @keyframes appearG {
+    0%{
+      border-top:5px solid #ECE8E1;
+    }
+    50%{
+      border-top:5px solid #ECE8E1;
+      border-left:5px solid #ECE8E1;
+      width:39.15vw;
+      height:5px;
+    }
+    90%{
+      border-bottom:0px solid #ECE8E1;
+    }
+    100% {
+      border-top:5px solid #ECE8E1;
+      border-left:5px solid #ECE8E1;
+      border-bottom:5px solid #ECE8E1;
+      width:39.15vw;
+      height:130vh;
+    }
+  }
+
+  @keyframes appearD {
+    0%{
+      border-top:5px solid #ECE8E1;
+    }
+    50%{
+      border-top:5px solid #ECE8E1;
+      border-right:5px solid #ECE8E1;
+      width:39.15vw;
+      height:5px;
+    }
+    90%{
+      border-bottom:0px solid #ECE8E1;
+    }
+    100% {
+      border-top:5px solid #ECE8E1;
+      border-right:5px solid #ECE8E1;
+      border-bottom:5px solid #ECE8E1;
+      height:130vh;
+      width:39.15vw;
+    }
+  }
+
+  #accroche{
+    font-family: 'TheBoldFont';
+    color : white;
+    margin-top : 7vh;
+    font-size: 5em;
+    opacity: 0%;
+    left : 500px;
+    animation: sliding-slideaccroche 0.5s linear 2.8s forwards;
+  }
+
+  @keyframes sliding-slideaccroche{
+    100%{
+      opacity: 100%;
+      margin-top:10vh;
+    }
+
+  }
+
+  #slidePP{
+    position: absolute;
+    width:500vw;
+    height:140vh;
+    left : 1000vw;
+    z-index: 2;
+    background-color: #FF332C;
+    transform: skewX(110deg);
+    margin-top: -75vh;
+    animation: sliding-slidePP 1s ease 2.5s forwards;
+  }
+
+  @keyframes sliding-slidePP {
+    100%{
+      left : 15vw;
+    }
+  }
+
+  #accrochetexte{
+    font-family: 'Roboto';
+    font-size: 2em;
+    z-index: 10;
+  }
+
+  #competences{
+    position: absolute;
+    top:207vh;
+    left:11.1vw;
+    width:77.8vw;
+    height:50vh;
+
+  }
+
+  #soustitre{
+    position: absolute;
+    background-color: #ECE8E1;
+    margin-left: -36.4vw;
+    width:36.4vw;
+    height:13vh;
+    animation: slideSousTitre 0.5s ease-out 0.3s forwards;
+  }
+
+  @keyframes slideSousTitre {
+    100% {
+      margin-left: 0px;
+    }
+  }
+  #soustitreContainer{
+    overflow: hidden;
+    position: absolute;
+    width:36.4vw;
+    height:13vh;
+
+  }
+  #soustitre p{
+    position:static;
+    margin-top: 2.5vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-family: 'TheBoldFont';
+    font-style: oblique;
+    font-size: 2.5em;
+  }
+
+  .arrowtitre{
+    position: absolute;
+    height:13vh;
+    margin-left: -5vw;
+  }
+
+  #arrow1{
+    animation: slideArrow 0.4s linear forwards;
+  }
+
+  #arrow2{
+    animation: slideArrow 0.4s linear 0.1s forwards;
+  }
+
+  #arrow3{
+    animation: slideArrow 0.4s linear 0.2s forwards;
+  }
+
+  @keyframes slideArrow {
+    100% {
+      margin-left: 36.4vw;
+    }
+  }
+
+  #trappe{
+    position: absolute;
+    width:63.9vw;
+    height:52vh;
+    border : 1px solid rgba(236, 232, 225, 0);
+    background-color: #202020;
+    background-image: radial-gradient(gray 1%, transparent 2.25%);
+    background-size: 6vw 13vh;
+    background-position: 3vw 6.5vh;
+    border-style:solid;
+    animation: openTrappe 2s ease-in 1s forwards;
+  }
+
+  @keyframes openTrappe {
+    25% {
+      border-color:rgba(236, 232, 225, 1);
+      left:0vw;
+    }
+    100% {
+      border-color:rgba(236, 232, 225, 1);
+      left:100vw;
+    }
+  }
+
+  #behindTheWeb{
+    position: absolute;
+    left:36.1vw;
+    top:25.9vh;
+    width:63.9vw;
+    height:52vh;
+    overflow: hidden;
+    background-color: #012152;
+  }
+
+  #behindTheWeb p{
+    position:absolute;
+    width:70vw;
+    height:52vh;
+    margin-top: -75px;
+    margin-left: -15px;
+    font-family: 'UndefinedMedium';
+    font-size: 3em;
+    line-height: 0.9em;
+    color: #21B8CB;
+    word-wrap:break-word;
+    animation: moveNumbers 2s ease-in 1s infinite;
+  }
+
+  @keyframes moveNumbers {
+    50%{
+      width:63.9vw;
+    }
+    100%{
+      width:70vw;
+    }
+  }
+
+
+
+
 }
