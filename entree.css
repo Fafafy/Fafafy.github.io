@@ -1,0 +1,18 @@
+/** Les trucs cools que j'ai fait**/
+
+
+
+body {
+    /** Le background en croix que j'ai fait tout seul. Du coup tout est paramétrable **/
+    /** La disance entre les croix est changée avec la taille du background, et il faut donc adapter la taille de la croix avec (aussi gérable en px) **/
+    background:
+            linear-gradient(90deg, #2A2A33 41% ,transparent 41%, transparent 59% , #2A2A33 59%),
+            linear-gradient(#2A2A33 41% ,transparent 41%, transparent 59% , #2A2A33 59%),
+            linear-gradient(90deg, transparent 48% ,#65656B 48%, #65656B 52% , transparent 52%),
+            linear-gradient(transparent 48% ,#65656B 48%, #65656B 52% , transparent 52%) ;
+
+    background-size: 8vw 8vw;
+    background-color: #2A2A33;
+    background-position: -2vw -2vw;
+}
+/**/
